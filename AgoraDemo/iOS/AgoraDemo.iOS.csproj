@@ -82,6 +82,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.Agora.Full.iOS">
+      <HintPath>..\packages\Xamarin.Agora.Full.iOS.2.3.3\lib\Xamarin.iOS10\Xamarin.Agora.Full.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AgoraDemo\AgoraDemo.csproj">
@@ -103,6 +106,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
