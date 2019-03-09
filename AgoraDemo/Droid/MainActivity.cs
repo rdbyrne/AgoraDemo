@@ -19,6 +19,7 @@ namespace AgoraDemo.Droid
         int count = 1;
         private RtcEventHandler _rtcEventHandler;
         private RtcEngine _rtcEngine;
+        private bool _isVideoEnabled;
 
         private readonly string[] _permissions = new string[] {
             Manifest.Permission.Camera,
@@ -46,6 +47,69 @@ namespace AgoraDemo.Droid
             JoinChannel();
             // Get our button from the layout resource,
             // and attach an event to it
+        }
+
+        //private void SetUpButtons()
+        //{
+        //    var switchCamButton = FindViewById<Button>(Resource.Id.switch_cam_button);
+        //    switchCamButton.SetOnClickListener()
+        //}
+
+        [Java.Interop.Export("SwitchCamera")]
+        public void SwitchCamera(View view)
+        {
+            _rtcEngine.SwitchCamera();
+        }
+
+        [Java.Interop.Export("MuteLocalVideo")]
+        public void MuteLocalVideo(View view)
+        {
+            ImageView iv = (ImageView)view;
+            if (iv.Selected)
+            {
+                iv.Selected = false;
+                iv.SetImageResource(Resource.Mipmap.ic_cam_active_call);
+            }
+            else
+            {
+                iv.Selected = true;
+                iv.SetImageResource(Resource.Mipmap.ic_cam_disabled_call);
+            }
+            _rtcEngine.MuteLocalVideoStream(iv.Selected);
+            _isVideoEnabled = !iv.Selected;
+            FindViewById(Resource.Id.local_video_container).Visibility = _isVideoEnabled ? ViewStates.Visible : ViewStates.Gone;
+            //_localVideoView.Visibility = _isVideoEnabled ? ViewStates.Visible : ViewStates.Gone;
+        }
+
+        [Java.Interop.Export("MuteLocalAudio")]
+        public void MuteLocalAudio(View view)
+        {
+            ImageView iv = (ImageView)view;
+            if (iv.Selected)
+            {
+                iv.Selected = false;
+                iv.SetImageResource(Resource.Mipmap.ic_mic_active_call);
+            }
+            else
+            {
+                iv.Selected = true;
+                iv.SetImageResource(Resource.Mipmap.ic_mic_inactive_call);
+            }
+            _rtcEngine.MuteLocalAudioStream(iv.Selected);
+            var visibleMutedLayers = iv.Selected ? ViewStates.Visible : ViewStates.Invisible;
+            //FindViewById(Resource.Id.local_video_overlay).Visibility = visibleMutedLayers;
+            FindViewById(Resource.Id.local_video_muted).Visibility = visibleMutedLayers;
+        }
+
+        [Java.Interop.Export("EndCall")]
+        public void EndCall(View view)
+        {
+            _rtcEngine.StopPreview();
+            _rtcEngine.SetupLocalVideo(null);
+            _rtcEngine.LeaveChannel();
+            _rtcEngine.Dispose();
+            _rtcEngine = null;
+            Finish();
         }
 
         private bool CheckPermissions(bool requestPermissions = true)

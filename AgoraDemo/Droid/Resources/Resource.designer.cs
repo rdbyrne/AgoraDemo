@@ -281,23 +281,23 @@ namespace AgoraDemo.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0023
-			public const int action0 = 2131361827;
+			// aapt resource value: 0x7f0a0028
+			public const int action0 = 2131361832;
 			
-			// aapt resource value: 0x7f0a0020
-			public const int action_container = 2131361824;
+			// aapt resource value: 0x7f0a0025
+			public const int action_container = 2131361829;
+			
+			// aapt resource value: 0x7f0a002c
+			public const int action_divider = 2131361836;
+			
+			// aapt resource value: 0x7f0a0026
+			public const int action_image = 2131361830;
 			
 			// aapt resource value: 0x7f0a0027
-			public const int action_divider = 2131361831;
+			public const int action_text = 2131361831;
 			
-			// aapt resource value: 0x7f0a0021
-			public const int action_image = 2131361825;
-			
-			// aapt resource value: 0x7f0a0022
-			public const int action_text = 2131361826;
-			
-			// aapt resource value: 0x7f0a0031
-			public const int actions = 2131361841;
+			// aapt resource value: 0x7f0a0036
+			public const int actions = 2131361846;
 			
 			// aapt resource value: 0x7f0a0017
 			public const int all = 2131361815;
@@ -311,8 +311,8 @@ namespace AgoraDemo.Droid
 			// aapt resource value: 0x7f0a0008
 			public const int bottom = 2131361800;
 			
-			// aapt resource value: 0x7f0a0024
-			public const int cancel_action = 2131361828;
+			// aapt resource value: 0x7f0a0029
+			public const int cancel_action = 2131361833;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int center = 2131361801;
@@ -323,8 +323,8 @@ namespace AgoraDemo.Droid
 			// aapt resource value: 0x7f0a000b
 			public const int center_vertical = 2131361803;
 			
-			// aapt resource value: 0x7f0a002c
-			public const int chronometer = 2131361836;
+			// aapt resource value: 0x7f0a0031
+			public const int chronometer = 2131361841;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int clip_horizontal = 2131361804;
@@ -335,8 +335,11 @@ namespace AgoraDemo.Droid
 			// aapt resource value: 0x7f0a000e
 			public const int end = 2131361806;
 			
-			// aapt resource value: 0x7f0a0033
-			public const int end_padder = 2131361843;
+			// aapt resource value: 0x7f0a0024
+			public const int end_call_button = 2131361828;
+			
+			// aapt resource value: 0x7f0a0038
+			public const int end_padder = 2131361848;
 			
 			// aapt resource value: 0x7f0a000f
 			public const int fill = 2131361807;
@@ -350,14 +353,14 @@ namespace AgoraDemo.Droid
 			// aapt resource value: 0x7f0a001a
 			public const int forever = 2131361818;
 			
-			// aapt resource value: 0x7f0a002e
-			public const int icon = 2131361838;
+			// aapt resource value: 0x7f0a0033
+			public const int icon = 2131361843;
+			
+			// aapt resource value: 0x7f0a0037
+			public const int icon_group = 2131361847;
 			
 			// aapt resource value: 0x7f0a0032
-			public const int icon_group = 2131361842;
-			
-			// aapt resource value: 0x7f0a002d
-			public const int info = 2131361837;
+			public const int info = 2131361842;
 			
 			// aapt resource value: 0x7f0a001b
 			public const int italic = 2131361819;
@@ -374,11 +377,20 @@ namespace AgoraDemo.Droid
 			// aapt resource value: 0x7f0a001e
 			public const int local_video_container = 2131361822;
 			
+			// aapt resource value: 0x7f0a0020
+			public const int local_video_muted = 2131361824;
+			
 			// aapt resource value: 0x7f0a001f
 			public const int local_video_view_container = 2131361823;
 			
-			// aapt resource value: 0x7f0a0026
-			public const int media_actions = 2131361830;
+			// aapt resource value: 0x7f0a002b
+			public const int media_actions = 2131361835;
+			
+			// aapt resource value: 0x7f0a0023
+			public const int mute_audio_button = 2131361827;
+			
+			// aapt resource value: 0x7f0a0022
+			public const int mute_video_button = 2131361826;
 			
 			// aapt resource value: 0x7f0a0016
 			public const int none = 2131361814;
@@ -386,14 +398,14 @@ namespace AgoraDemo.Droid
 			// aapt resource value: 0x7f0a001c
 			public const int normal = 2131361820;
 			
-			// aapt resource value: 0x7f0a0030
-			public const int notification_background = 2131361840;
+			// aapt resource value: 0x7f0a0035
+			public const int notification_background = 2131361845;
 			
-			// aapt resource value: 0x7f0a0029
-			public const int notification_main_column = 2131361833;
+			// aapt resource value: 0x7f0a002e
+			public const int notification_main_column = 2131361838;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int notification_main_column_container = 2131361832;
+			// aapt resource value: 0x7f0a002d
+			public const int notification_main_column_container = 2131361837;
 			
 			// aapt resource value: 0x7f0a001d
 			public const int remote_video_view_container = 2131361821;
@@ -401,17 +413,20 @@ namespace AgoraDemo.Droid
 			// aapt resource value: 0x7f0a0013
 			public const int right = 2131361811;
 			
-			// aapt resource value: 0x7f0a002f
-			public const int right_icon = 2131361839;
+			// aapt resource value: 0x7f0a0034
+			public const int right_icon = 2131361844;
 			
-			// aapt resource value: 0x7f0a002a
-			public const int right_side = 2131361834;
+			// aapt resource value: 0x7f0a002f
+			public const int right_side = 2131361839;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int start = 2131361812;
 			
-			// aapt resource value: 0x7f0a0025
-			public const int status_bar_latest_event_content = 2131361829;
+			// aapt resource value: 0x7f0a002a
+			public const int status_bar_latest_event_content = 2131361834;
+			
+			// aapt resource value: 0x7f0a0021
+			public const int switch_cam_button = 2131361825;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int tag_transition_group = 2131361794;
@@ -428,8 +443,8 @@ namespace AgoraDemo.Droid
 			// aapt resource value: 0x7f0a0006
 			public const int text2 = 2131361798;
 			
-			// aapt resource value: 0x7f0a002b
-			public const int time = 2131361835;
+			// aapt resource value: 0x7f0a0030
+			public const int time = 2131361840;
 			
 			// aapt resource value: 0x7f0a0007
 			public const int title = 2131361799;
@@ -531,7 +546,28 @@ namespace AgoraDemo.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Icon = 2130903040;
+			public const int ic_cam_active_call = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int ic_cam_disabled_call = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int ic_end_call = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int ic_mic_active_call = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int ic_mic_inactive_call = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int ic_mic_muted_call = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int ic_switch_camera_call = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int Icon = 2130903047;
 			
 			static Mipmap()
 			{

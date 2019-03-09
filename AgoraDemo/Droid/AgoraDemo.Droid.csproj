@@ -132,6 +132,7 @@
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.28.0.0.1\lib\monoandroid90\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Android.Export" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AgoraDemo\AgoraDemo.csproj">
@@ -159,6 +160,34 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_cam_active_call.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_cam_disabled_call.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_end_call.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_mic_active_call.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_mic_inactive_call.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_mic_muted_call.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_switch_camera_call.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_cam_active_call.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_cam_disabled_call.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_end_call.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_mic_active_call.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_mic_inactive_call.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_mic_muted_call.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_switch_camera_call.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_cam_active_call.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_cam_disabled_call.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_end_call.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_mic_active_call.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_mic_inactive_call.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_mic_muted_call.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_switch_camera_call.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_cam_active_call.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_cam_disabled_call.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_end_call.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_mic_active_call.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_mic_inactive_call.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_mic_muted_call.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_switch_camera_call.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.28.0.0.1\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.28.0.0.1\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />
