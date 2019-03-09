@@ -94,6 +94,18 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_reverse_cam.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_reverse_cam.imageset\icReverseCamCall.pdf" />
+            <ImageAsset Include="Assets.xcassets\ic_cam_inactive.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_cam_inactive.imageset\icCamInactiveCall.pdf" />
+            <ImageAsset Include="Assets.xcassets\ic_cam_active.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_cam_active.imageset\icCamActiveCall.pdf" />
+         <ImageAsset Include="Assets.xcassets\ic_mic_active.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_mic_active.imageset\icMicActiveCall.pdf" />
+    <ImageAsset Include="Assets.xcassets\ic_mic_inactive.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_mic_inactive.imageset\icMicInactiveCall.pdf" />
+         <ImageAsset Include="Assets.xcassets\ic_end_call.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_end_call.imageset\icEndCall.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

@@ -45,15 +45,7 @@ namespace AgoraDemo.Droid
             SetVideoEncoder();
             SetupLocalVideo();
             JoinChannel();
-            // Get our button from the layout resource,
-            // and attach an event to it
         }
-
-        //private void SetUpButtons()
-        //{
-        //    var switchCamButton = FindViewById<Button>(Resource.Id.switch_cam_button);
-        //    switchCamButton.SetOnClickListener()
-        //}
 
         [Java.Interop.Export("SwitchCamera")]
         public void SwitchCamera(View view)
@@ -78,7 +70,6 @@ namespace AgoraDemo.Droid
             _rtcEngine.MuteLocalVideoStream(iv.Selected);
             _isVideoEnabled = !iv.Selected;
             FindViewById(Resource.Id.local_video_container).Visibility = _isVideoEnabled ? ViewStates.Visible : ViewStates.Gone;
-            //_localVideoView.Visibility = _isVideoEnabled ? ViewStates.Visible : ViewStates.Gone;
         }
 
         [Java.Interop.Export("MuteLocalAudio")]
@@ -97,7 +88,6 @@ namespace AgoraDemo.Droid
             }
             _rtcEngine.MuteLocalAudioStream(iv.Selected);
             var visibleMutedLayers = iv.Selected ? ViewStates.Visible : ViewStates.Invisible;
-            //FindViewById(Resource.Id.local_video_overlay).Visibility = visibleMutedLayers;
             FindViewById(Resource.Id.local_video_muted).Visibility = visibleMutedLayers;
         }
 
@@ -122,11 +112,6 @@ namespace AgoraDemo.Droid
             return isGranted;
         }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
-        {
-            //var test = 0;
-        }
-
             public void OnFirstRemoteVideoDecoded(int uid, int width, int height, int elapsed)
         {
             RunOnUiThread(() =>
@@ -143,8 +128,8 @@ namespace AgoraDemo.Droid
         private void SetVideoEncoder()
         {
             VideoEncoderConfiguration.ORIENTATION_MODE
-orientationMode =
-VideoEncoderConfiguration.ORIENTATION_MODE.OrientationModeFixedPortrait;
+                orientationMode =
+                VideoEncoderConfiguration.ORIENTATION_MODE.OrientationModeFixedPortrait;
 
             VideoEncoderConfiguration.VideoDimensions dimensions = new VideoEncoderConfiguration.VideoDimensions(360, 640);
 
@@ -164,7 +149,6 @@ VideoEncoderConfiguration.ORIENTATION_MODE.OrientationModeFixedPortrait;
 
         private void SetupRemoteVideo(int uid)
         {
-            //_remoteId = (uint)uid;
             FrameLayout container = (FrameLayout)FindViewById(Resource.Id.remote_video_view_container);
             if (container.ChildCount >= 1)
             {

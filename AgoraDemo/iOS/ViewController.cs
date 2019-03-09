@@ -9,6 +9,9 @@ namespace AgoraDemo.iOS
         private AgoraRtcEngineKit _rtcEngine;
         private RtcEngineDelegate _rtcEngineDeletegate;
 
+        private bool _audioMuted = false;
+        private bool _videoMuted = false;
+
         public ViewController(IntPtr handle) : base(handle)
         {
         }
@@ -31,46 +34,54 @@ namespace AgoraDemo.iOS
             _rtcEngine.JoinChannelByToken(string.Empty, "DEMOCHANNEL1", null, 0, JoinSuccessful);
         }
 
-        //        private void SetVideoEncoder()
-        //        {
-        //            var configuration = new AgoraVideoEncoderConfiguration(AgoraVideoDimension640x360,)
-
-        //            let configuration = AgoraVideoEncoderConfiguration(size:
-        //AgoraVideoDimension640x360, frameRate: .fps15, bitrate: 400,
-        //orientationMode: .fixedPortrait)
-        //agoraKit.setVideoEncoderConfiguration(configuration)
-        //}
-
-//        func setupRemoteVideo()
-//        {
-//            let videoCanvas = AgoraRtcVideoCanvas()
-//    videoCanvas.uid = 1
-//    videoCanvas.view = remoteVideo
-//    videoCanvas.renderMode = .fit
-//    agoraKit.setupRemoteVideo(videoCanvas)
-//}
-
         public void SetRemoteVideo(AgoraRtcEngineKit engine, nuint uid, CoreGraphics.CGSize size, nint elapse)
         {
-            AgoraRtcVideoCanvas videoCanvas = new AgoraRtcVideoCanvas();
-            videoCanvas.Uid = uid;
-            videoCanvas.View = ContainerView;
-            videoCanvas.RenderMode = VideoRenderMode.Adaptive;
+            AgoraRtcVideoCanvas videoCanvas = new AgoraRtcVideoCanvas
+            {
+                Uid = uid,
+                View = ContainerView,
+                RenderMode = VideoRenderMode.Adaptive
+            };
             _rtcEngine.SetupRemoteVideo(videoCanvas);
         }
 
         private void JoinSuccessful(Foundation.NSString channel, nuint uid, nint elapsed)
         {
-            //_localId = (uint)uid;
             _rtcEngine.SetEnableSpeakerphone(true);
             UIApplication.SharedApplication.IdleTimerDisabled = true;
-            //RefreshDebug();
+        }
+
+        partial void SwitchCamera(UIButton sender)
+        {
+            _rtcEngine.SwitchCamera();
         }
 
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.		
+        }
+
+        partial void MuteVideo(UIButton sender)
+        {
+            _videoMuted = !_videoMuted;
+            MuteVideoButton.Selected = _videoMuted;
+            LocalView.Hidden = _videoMuted;
+            SwitchCameraButton.Hidden = _videoMuted;
+            _rtcEngine.MuteLocalVideoStream(_videoMuted);
+        }
+
+        partial void MuteAudio(UIButton sender)
+        {
+            _audioMuted = !_audioMuted;
+            MuteAudioButton.Selected = _audioMuted;
+            _rtcEngine.MuteLocalAudioStream(_videoMuted);
+        }
+
+        partial void EndCall(UIButton sender)
+        {
+            _rtcEngine.LeaveChannel(null);
+            LocalView.Hidden = true;
         }
     }
 }
